@@ -1,6 +1,6 @@
  function viewModel(){
     var self = this;
-    var map,service, infowindow, address;
+    var map,address;
     var myLocation={};
     self.fourSquareAPI = '';
     self.Location_Arr = ko.observableArray([]);
@@ -81,8 +81,8 @@
       } else if (place.formatted_address !== undefined) {
         address = place.formatted_address;
       }       
-      var contentString = '<div style="font-weight: 300">' + place.name + '</div><div>' 
-      + address + '</div>' + self.fourSquareAPI;
+      var contentString = '<div style="font-weight: 300">' + place.name + '</div><div>' + 
+          address + '</div>' + self.fourSquareAPI;
 
       google.maps.event.addListener(marker, 'click', function() {      
           infowindow.setContent(contentString);      
@@ -160,7 +160,7 @@
           var err = textStatus + ", " + error;
           console.log("Request Failed:" + err);  
         });
-    }  
+    }; 
  
  // open infowindow upon click
   self.clickMarker = function(place) {
