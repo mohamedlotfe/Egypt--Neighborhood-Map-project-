@@ -26,11 +26,11 @@
         radius: 1000,
         types: ['restaurant']
       };
-      var service = new google.maps.places.PlacesService(map);
+      var service = new google.maps.places.Places(map);
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);         
 
-      var address,service;
+      
       var list = (document.getElementById('list'));
       var input = (document.getElementById('input'));
 
