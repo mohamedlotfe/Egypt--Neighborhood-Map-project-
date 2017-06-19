@@ -26,7 +26,7 @@
         radius: 1000,
         types: ['restaurant']
       };
-      var service = new google.maps.places.Places(map);
+      var service = new google.maps.places.PlacesService(map);
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);         
 
