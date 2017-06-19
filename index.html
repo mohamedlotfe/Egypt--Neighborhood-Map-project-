@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Neighborhood Map project </title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/offline.css">
+  
+  
+  <script type='text/javascript' src='js/lib/knockout-3.2.0.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://fast.eager.io/j69bi5jBV3.js"></script>
+  <script src="js/lib/jquery-1.11.2.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script  src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDdVKe-Wtr53nm6wvy0-dkeS0KqplN9dU8"> </script>
+  <script src="js/lib/offline.js"></script>
+  <script src="js/app.js"></script>
+
+</head>
+ <body>
+
+
+
+<!-- Displaying the map  -->
+<div id="map"></div>
+
+<div class="col-md-4">
+
+<!-- search box   -->
+<input id="input" class="form-controls first" type="text" placeholder="Search Here" >
+
+<!-- Displaying the items for search  -->
+<div id="list">
+	<ul data-bind="foreach: Location_Arr" class="list-group">
+		<li data-bind="click: $parent.clickMarker" class="list-group-item">
+			 <p class="park"><span data-bind="text: name"></span></p>
+                <p class="address"><span data-bind="text: address"></span></p>   
+		</li>
+	</ul>	
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+ </body>
+</html>
