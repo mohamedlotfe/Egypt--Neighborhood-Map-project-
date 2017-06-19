@@ -131,7 +131,7 @@
       //I2F4TTJ0HJOIAO2GCPP0T2NJBMMHFVMCLAQ4HIHF5U1JZCNG
       var foursquare = 'https://api.foursquare.com/v2/venues/search?client_id=2BIWS0KFSP1W12ARXFHNA20WHNGY0NMOAD3AFYM1ZGCFCF32'+
       '&client_secret=I2F4TTJ0HJOIAO2GCPP0T2NJBMMHFVMCLAQ4HIHF5U1JZCNG'+
-      '&v=20150321&ll=30.056508, 31.337882&query=\''+ point['name'] + '\'&limit=10';
+      '&v=20150321&ll=30.056508, 31.337882&query=\''+ point.name + '\'&limit=10';
       
       // start ajax and grab: venue name, phone number and twitter handle
       $.getJSON(foursquare).done(function(response) {
