@@ -9,7 +9,6 @@
 
     var egypt =  new google.maps.LatLng(30.056508, 31.337882);  //center of the map
     var infowindow = new google.maps.InfoWindow();               //pop up window display information
-    var service = new google.maps.places.PlacesService(map);
     
 
 
@@ -27,7 +26,7 @@
         radius: 1000,
         types: ['restaurant']
       };
-
+      var service = new google.maps.places.PlacesService(map);
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);         
 
